@@ -1,6 +1,7 @@
 import { AuthClient } from "@dfinity/auth-client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { canisterId, createActor } from "../../declarations/whoami";
+import { canisterId, createActor } from "../../src/declarations/whoami";
+
 
 const AuthContext = createContext();
 
@@ -21,7 +22,7 @@ const defaultOptions = {
     identityProvider:
       process.env.DFX_NETWORK === "ic"
         ? "https://identity.ic0.app/#authorize"
-        : `http://localhost:4943?canisterId=${process.env.CANISTER_ID_INTERNET_IDENTITY}#authorize`,
+        : `http://localhost:4943?canisterId=${process.env.CANISTER_ID_internet_identity}#authorize`,
   },
 };
 

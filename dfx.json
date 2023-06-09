@@ -19,12 +19,12 @@
         }
       }
     },
-    "auth_client_demo_assets": {
+    "frontend": {
       "dependencies": [
         "whoami"
       ],
       "source": [
-        "src/auth_client_demo_assets/vue/dist"
+        "src/frontend/dist"
       ],
       "type": "assets"
     }

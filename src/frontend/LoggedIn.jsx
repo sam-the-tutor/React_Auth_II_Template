@@ -13,6 +13,7 @@ function LoggedIn() {
 
   const handleClick = async () => {
     const whoami = await whoamiActor.whoami();
+    console.log("Whoami results : ", whoami)
     setResult(whoami);
   };
 
