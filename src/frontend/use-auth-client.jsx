@@ -57,6 +57,7 @@ export const useAuthClient = (options = defaultOptions) => {
   };
 
   async function updateClient(client) {
+    console.log("Client Object :", client)
     const isAuthenticated = await client.isAuthenticated();
     setIsAuthenticated(isAuthenticated);
 
@@ -67,6 +68,7 @@ export const useAuthClient = (options = defaultOptions) => {
     setPrincipal(principal);
 
     setAuthClient(client);
+    
 
     const actor = createActor(canisterId, {
       agentOptions: {
